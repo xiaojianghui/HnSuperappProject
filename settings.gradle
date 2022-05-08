@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "HnSuperappProject"
 include ':app'
 include ':common'
+include ':zxin'

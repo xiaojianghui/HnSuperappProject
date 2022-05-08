@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/sv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.king.zxing.ViewfinderView
+            android:id="@+id/vfv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cornerColor="@color/zxin_color_FF4E5BCD"
+            app:cornerRectHeight="54dp"
+            app:cornerRectWidth="4dp"
+            app:frameColor="@color/zxin_color_FF4E5BCD"
+            app:frameHeight="242dp"
+            app:frameWidth="242dp"
+            app:labelText="请扫描智慧码"
+            app:labelTextColor="@color/zxin_color_FFFFFFFF"
+            app:labelTextLocation="bottom"
+            app:labelTextPadding="18dp"
+            app:labelTextSize="16sp"
+            app:laserColor="@color/zxin_color_FF4E5BCD"
+            app:maskColor="@color/zxin_color_80000000"
+            app:scannerLineHeight="4dp" />
+
+        <TextView
+            android:id="@+id/tv_torch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:drawablePadding="12dp"
+            android:gravity="center"
+            android:text="打开照明"
+            android:textColor="@color/zxin_color_FFFFFFFF"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardCodedText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -11,6 +11,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.alibaba.android.arouter.launcher.ARouter
 import com.xiangqian.hnhjt.basemodule.callback.RequestPermissionsResult
 import com.xiangqian.hnhjt.basemodule.config.DataBindingConfig
 
@@ -26,6 +27,7 @@ open abstract class CommonActivity<VDB : ViewDataBinding> : AppCompatActivity() 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        ARouter.getInstance().inject(this)  // Start auto inject.
         //保持先后顺序
         initViewModel() //1
         mBinding = DataBindingUtil.setContentView(this, getLayoutId())
